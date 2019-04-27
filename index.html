@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/index.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/prism/prism.css" />
+    <script src="/vendor/prism/prism.js"></script>
+  </head>
+  <body>
+    <!-- @TODO fix raw, CSI #7, here //-->
+    <div id="page" class="page-section-root">
+      <div id="header">
+        <div class="container">
+          <ul id="header-main-links">
+            <li><a id="main-section-link-root" href="/"><span class="main-p">P</span>antomime</a></li>
+            <li><a id="main-section-link-documentation" href="/docs/actors/overview.html">Documentation</a></li>
+            <li><a href="https://github.com/pantomime-rs/pantomime">Repository</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="content">
+        <div class="container"><p id="tagline">
+  <strong>Pantomime</strong> is a library for the
+    <a href="https://www.rust-lang.org/">Rust programming language</a>
+    that empowers you to build concurrent, stateful, and stream-oriented programs with ease.
+</p>
+<div id="info">
+  <div class="col-half">
+    <ul id="features">
+      <li><strong>Event Driven</strong><br/> Powered by an <a href="https://en.wikipedia.org/wiki/Actor_model">Actor-based</a> concurrency model.</li>
+      <li><strong>Stream Oriented</strong><br/> Provides an expressive, fair, and performant streaming implementation built on a dynamic push-pull model.</strong></li>
+      <li><strong>Performant</strong><br/> 100M msgs/sec on a single node with linear scalability.</li>
+      <li><strong>Lightweight</strong><br/> Applications consume as little as <em>1MB</em> RSS.</li>
+      <li><strong>Adaptable</strong><br/> Multiple built-in schedulers allow you to tune program execution to the target hardware.</li>
+    </ul>
+  </div>
+  <div class="col-half">
+
+<pre><code class="language-rust">use pantomime::prelude::*;
+
+enum Msg {
+  Greet(String)
+}
+
+struct MyActor;
+
+impl Actor&lt;Msg&gt; for MyActor {
+  fn receive(&mut self, msg: Msg, ctx: &mut ActorCtx<Msg>) {
+    match msg {
+      Greet(name) => println!("Hello {}!", name)
+    }
+  }
+}</code></pre>
+
+</div>
+
+</div>
+<div id="get-started">
+  <a href="/docs/actors/overview.html">
+    Documentation
+  </a>
+</div>
+
+
+</div>
+      </div>
+
+      <div id="footer">
+        &copy; 2019 Pantomime
+      </div>
+    </div>
+  </body>
+</html>
+
