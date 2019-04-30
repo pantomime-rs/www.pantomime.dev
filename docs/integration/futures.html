@@ -6,15 +6,15 @@
     <link rel="stylesheet" type="text/css" href="/index.css" />
     <link rel="stylesheet" type="text/css" href="/vendor/prism/prism.css" />
     <script src="/vendor/prism/prism.js"></script>
+    <title>Futures / Integration / Pantomime</title>
   </head>
   <body>
-    <!-- @TODO fix raw, CSI #7, here //-->
     <div id="page" class="page-section-documentation">
       <div id="header">
         <div class="container">
           <ul id="header-main-links">
             <li><a id="main-section-link-root" href="/"><span class="main-p">P</span>antomime</a></li>
-            <li><a id="main-section-link-documentation" href="/docs/actors/overview.html">Documentation</a></li>
+            <li><a id="main-section-link-documentation" href="/docs/pantomime/overview.html">Documentation</a></li>
             <li><a href="https://github.com/pantomime-rs/pantomime">Repository</a></li>
           </ul>
         </div>
@@ -23,6 +23,9 @@
       <div id="content">
         <div class="container"><div class="doc-page doc-section-integration-futures">
   <div class="doc-nav">
+    <h5>Pantomime</h5>
+    <a class="doc-section-link-pantomime-overview" href="/docs/pantomime/overview.html">Getting Started</a>
+
     <h5>Actors</h5>
     <a class="doc-section-link-actors-overview" href="/docs/actors/overview.html">Overview</a>
     <a class="doc-section-link-actors-hierarchy" href="/docs/actors/hierarchy.html">Hierarchy</a>
@@ -52,6 +55,9 @@
   crate. Futures can be spawned by dispatchers, and their results can be piped to
   actors.</p>
 
+<p class="note">Futures integration is provided by the <em class="code">futures-support</em>
+  feature, which is enabled by default.</p>
+
 <h4>Spawning Futures</h4>
 
 <p>Any <em class="code">Dispatcher</em> can spawn <em class="code">Future</em>s and drive
@@ -73,6 +79,7 @@ context.spawn_future(
   my_future.pipe_to(my_actor)
 );
 </code></pre>
+
 
 
 </div>

@@ -6,15 +6,15 @@
     <link rel="stylesheet" type="text/css" href="/index.css" />
     <link rel="stylesheet" type="text/css" href="/vendor/prism/prism.css" />
     <script src="/vendor/prism/prism.js"></script>
+    <title>Tokio / Integration / Pantomime</title>
   </head>
   <body>
-    <!-- @TODO fix raw, CSI #7, here //-->
     <div id="page" class="page-section-documentation">
       <div id="header">
         <div class="container">
           <ul id="header-main-links">
             <li><a id="main-section-link-root" href="/"><span class="main-p">P</span>antomime</a></li>
-            <li><a id="main-section-link-documentation" href="/docs/actors/overview.html">Documentation</a></li>
+            <li><a id="main-section-link-documentation" href="/docs/pantomime/overview.html">Documentation</a></li>
             <li><a href="https://github.com/pantomime-rs/pantomime">Repository</a></li>
           </ul>
         </div>
@@ -23,6 +23,9 @@
       <div id="content">
         <div class="container"><div class="doc-page doc-section-integration-tokio">
   <div class="doc-nav">
+    <h5>Pantomime</h5>
+    <a class="doc-section-link-pantomime-overview" href="/docs/pantomime/overview.html">Getting Started</a>
+
     <h5>Actors</h5>
     <a class="doc-section-link-actors-overview" href="/docs/actors/overview.html">Overview</a>
     <a class="doc-section-link-actors-hierarchy" href="/docs/actors/hierarchy.html">Hierarchy</a>
@@ -46,7 +49,22 @@
     <a class="doc-section-link-reference-api-documentation" href="#">API Documentation</a>
     <a class="doc-section-link-reference-examples" href="#">Examples</a>
   </div>
-  <div class="doc-content">
+  <div class="doc-content"><h2>Integration / Tokio</h2>
+
+<p>For compatibility with other libraries in the ecosystem, Pantomime's dispatchers can serve as
+  a <a href="https://github.com/tokio-rs/tokio/tree/master/tokio-executor">Tokio Executor</a>.</p>
+
+<p class="note">Tokio integration is provided by the <em class="code">tokio-support</em>
+  feature, which must be enabled in <em class="code">Cargo.toml</em>.</p>
+
+<h4>Hyper</h4>
+
+<p><a href="https://hyper.rs/">Hyper</a> is an HTTP library for the Rust language.
+  Refer to the <a href="https://github.com/pantomime-rs/pantomime/examples/http-hyper">Hyper example</a>
+  to see how you can combine Pantomime's Tokio support with Hyper to
+  provide an HTTP interface to your applications.</p>
+
+
 
 </div>
 </div>
